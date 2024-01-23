@@ -1,0 +1,44 @@
+Инструкция для создания XML
+
+Импорт библиотеки: Импортируем необходимую библиотеку для работы с XML.
+
+import xml.etree.ElementTree as ET
+Создание корневого элемента: создаем корневой элемент дерева.
+
+root = ET.Element("root")
+
+Добавление дочерних элементов:
+
+child1 = ET.SubElement(root, "child1")
+child1.text = "This is child 1"
+
+child2 = ET.SubElement(root, "child2")
+child2.text = "This is child 2"
+Создание XML дерева: Создаем объект ElementTree на основе корневого элемента.
+
+tree = ET.ElementTree(root)
+Сохранение в файл: Сохраняем XML дерево в файл.
+
+tree.write("example.xml")
+
+В результате  создан XML файл с указанными элементами и содержимым.
+
+пример:
+
+import xml.etree.ElementTree as ET
+
+Создаем корневой элемент
+root = ET.Element("root")
+
+Добавляем дочерние элементы
+child1 = ET.SubElement(root, "child1")
+child1.text = "This is child 1"
+
+child2 = ET.SubElement(root, "child2")
+child2.text = "This is child 2"
+
+Создание XML дерева
+tree = ET.ElementTree(root)
+
+Сохранение в файл
+tree.write("example.xml")
